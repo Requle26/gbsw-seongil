@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적확인</title>
+</head>
+<body>
+    <h1>성적을 확인해보자</h1>
+    <input
+        id = 'input_score'
+        type="number"
+        placeholder="성적을 입력해주세요"
+    />
+    <button id="btn" type="button">성적 확인</button>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    document.getElementById("btn").onclick = function () {
+        const score = parseInt(document.getElementById("input_score").value);
+        let grade = null;
+        switch (true) {
+            case score > 100 || score < 0:
+                grade = "올바른 점수(0~100)를 입력하세요.";
+                break;
+            case score >= 90:
+                grade = 'A';
+                break;
+            case score >= 80:
+                grade = 'B';
+                break;
+            case score >= 70:
+                grade = 'C';
+                break;
+            case score >= 60:
+                grade = 'D';
+                break;
+            default:
+                grade = 'F';
+        };
+        document.getElementById("result").textContent = grade;
+    };
+</script>

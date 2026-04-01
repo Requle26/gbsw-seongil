@@ -13,16 +13,16 @@ rl.question("점수를 입력하세요. : ", function (score) {
     // 0 ~ 60 점 - F학점
     // 그 외 - 범위를 벗어났습니다
     switch (parseInt(score)) {
-        case score>=91:
+        case score>=90:
             console.log("A학점");
             break;
-        case score>=81:
+        case score>=80:
             console.log("B학점");
             break;
-        case score>=71:
+        case score>=70:
             console.log("C학점");
             break;
-        case score>=61:
+        case score>=60:
             console.log("D학점");
             break;
         case score>=0:
